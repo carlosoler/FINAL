@@ -50,9 +50,16 @@ class MyTestCase(unittest.TestCase):
         resultado = cont.calculador(peticion, fichero)
         fichero_abierto = open(fichero, "r")
         f = fichero_abierto.read()
-        if resultado in f:
-            return True
-        self.assertTrue(resultado)
+        self.assertTrue(resultado in f)
+
+    def test_ComprobarQueLaFraseNoEstaEnElFichero(self):
+        peticion = 'FRASE'
+        fichero = 'DATOS'
+        cont = ContadorFrases()
+        resultado = "subnormal"
+        fichero_abierto = open(fichero, "r")
+        f = fichero_abierto.read()
+        self.assertFalse(resultado in f)
 
 
 if __name__ == '__main__':
