@@ -17,3 +17,6 @@ class ContadorFrases:
 
         elif peticion.upper() == 'FRASE':
             return random.choice(ficheroSinSaltoLinea)
+
+        else:
+            return "ERROR"
