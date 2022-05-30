@@ -4,7 +4,7 @@ from ContadorFrases\
 import errno
 import os.path
 
-fichero = 'ejemplo_passwd'
+fichero = 'frases'
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -21,6 +21,7 @@ while True:
         resultado = cont.calculador(peticion, fichero)
 
         ns.send(resultado.encode('utf-8'))
+        ns.close()
 
     except IOError as e:
         if e.errno == errno.EPIPE:
