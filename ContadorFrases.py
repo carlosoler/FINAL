@@ -13,4 +13,3 @@ class ContadorFrases:
                 Counter += 1
 
         return '%d FRASES %d LINEAS' % (Counter, lineas)
-        #return Counter

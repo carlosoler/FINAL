@@ -27,6 +27,14 @@ class MyTestCase(unittest.TestCase):
         esperado = "34 FRASES 35 LINEAS"
         self.assertEqual(esperado, resultado)
 
+    def test_fraseAleatoria(self):
+        peticion = 'FRASE'
+        fichero = 'ficheroPrueba'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        esperado = "hola que tal"
+        self.assertEqual(esperado, resultado)
+
 
 if __name__ == '__main__':
     unittest.main()
