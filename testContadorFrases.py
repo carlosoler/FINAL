@@ -82,7 +82,7 @@ class MyTestCase(unittest.TestCase):
         fichero = 'Makefile'
         cont = ContadorFrases()
         resultado = cont.calculador(peticion, fichero)
-        esperado = "10 FRASES 15 LINEAS"
+        esperado = "14 FRASES 21 LINEAS"
         self.assertEqual(esperado, resultado)
 
     def test_probarFicheroServices(self):
@@ -91,6 +91,14 @@ class MyTestCase(unittest.TestCase):
         cont = ContadorFrases()
         resultado = cont.calculador(peticion, fichero)
         esperado = "11159 FRASES 11177 LINEAS"
+        self.assertEqual(esperado, resultado)
+
+    def test_probarenviarTOTALenMinusculas(self):
+        peticion = 'total'
+        fichero = 'ejemplo_services'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        esperado = "ERROR"
         self.assertEqual(esperado, resultado)
 
 if __name__ == '__main__':
