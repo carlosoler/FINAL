@@ -69,5 +69,13 @@ class MyTestCase(unittest.TestCase):
         esperado = "ERROR"
         self.assertEqual(esperado, resultado)
 
+    def test_pasarFicheroQueNoExiste(self):
+        peticion = 'FRASE'
+        fichero = 'uuu'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        esperado = "ERROR"
+        self.assertEqual(esperado, resultado)
+
 if __name__ == '__main__':
     unittest.main()
