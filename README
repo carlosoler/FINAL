@@ -1,1 +1,4 @@
 En este directorio debe entregar los ficheros que conforman la respuesta a la prueba.
+
+Se ha utilizado el entorno de desarrollo Pycharm.
+Para la ejecución de los test hay que darle click derecho al archivo testContadorFrases.py y ejecutarlo donde pone "Run Python test y test" o introducir el siguiente comando en la terminal de Pycharm: python3 -m unittest testContadorFrases
