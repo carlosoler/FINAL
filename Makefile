@@ -12,3 +12,9 @@ cliente:
 
 servidor:
 	python3 servidor.py
+
+total_infinito:
+    while true; do echo 'TOTAL' | make cliente ; done
+
+frase_infinito:
+    while true; do echo 'FRASE' | make cliente ; done
