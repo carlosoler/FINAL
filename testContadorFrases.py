@@ -8,9 +8,7 @@ class MyTestCase(unittest.TestCase):
         fichero = 'ficheroPrueba'
         cont = ContadorFrases()
         resultado = cont.calculador(peticion, fichero)
-        esperado = "3 FRASES 1 LINEAS"
-        self.assertEqual(esperado, resultado)
-
+        esperado = "1 FRASES 1 LINEAS"
 
 
 if __name__ == '__main__':
