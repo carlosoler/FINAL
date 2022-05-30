@@ -15,9 +15,11 @@ class ContadorFrases:
                 for frase in ficheroSinSaltoLinea:
                     if frase:
                         contador += 1
+                fichero_abierto.close()
                 return '%d FRASES %d LINEAS' % (contador, lineas)
 
             elif peticion.upper() == 'FRASE':
+                fichero_abierto.close()
                 return random.choice(ficheroSinSaltoLinea)
             else:
                 return "ERROR"

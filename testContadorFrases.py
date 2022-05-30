@@ -82,7 +82,7 @@ class MyTestCase(unittest.TestCase):
         fichero = 'Makefile'
         cont = ContadorFrases()
         resultado = cont.calculador(peticion, fichero)
-        esperado = "6 FRASES 9 LINEAS"
+        esperado = "10 FRASES 15 LINEAS"
         self.assertEqual(esperado, resultado)
 
     def test_probarFicheroServices(self):

@@ -12,14 +12,14 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind(('0.0.0.0', 16023))
 s.listen(1)
 
-ns, dir_cli = s.accept()
 while True:
+    ns, dir_cli = s.accept()
     try:
         peticion = ns.recv(100).decode('utf-8').strip()
         cont = ContadorFrases()
         resultado = cont.calculador(peticion, fichero)
-        ns.sendto(resultado.encode('utf-8'), dir_cli)
-        #ns.sendto("\n".encode('utf-8'), dir_cli)
+
+        ns.send(resultado.encode('utf-8'))
         ns.close()
     except IOError as e:
         if e.errno == errno.EPIPE:
