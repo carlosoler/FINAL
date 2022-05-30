@@ -61,6 +61,13 @@ class MyTestCase(unittest.TestCase):
         f = fichero_abierto.read()
         self.assertFalse(resultado in f)
 
+    def test_devolverError(self):
+        peticion = 'hola'
+        fichero = 'DATOS'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        esperado = "ERROR"
+        self.assertEqual(esperado, resultado)
 
 if __name__ == '__main__':
     unittest.main()
