@@ -8,18 +8,15 @@ class ContadorFrases:
             fichero_abierto = open(fichero, "r")
             f = fichero_abierto.read()
             lineas = f.count("\n") +1
-            #lineas = str(len(fichero_abierto.readlines()))
-
-            Counter = 0
-            CoList = f.split("\n")
-            for i in CoList:
-                if i:
-                    Counter += 1
-            return '%d FRASES %d LINEAS' % (Counter, lineas)
+            contador = 0
+            ficheroSinSaltoLinea = f.split("\n")
+            for frase in ficheroSinSaltoLinea:
+                if frase:
+                    contador += 1
+            return '%d FRASES %d LINEAS' % (contador, lineas)
 
         elif peticion.upper() == 'FRASE':
             fichero_abierto = open(fichero, "r")
             f = fichero_abierto.read()
-            CoList = f.split("\n")
-
-            return random.choice(CoList)
+            ficheroSinSaltoLinea = f.split("\n")
+            return random.choice(ficheroSinSaltoLinea)
