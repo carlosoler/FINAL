@@ -77,5 +77,13 @@ class MyTestCase(unittest.TestCase):
         esperado = "ERROR"
         self.assertEqual(esperado, resultado)
 
+    def test_probarFuncionalidadCompleta(self):
+        peticion = 'TOTAL'
+        fichero = 'Makefile'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        esperado = "6 FRASES 9 LINEAS"
+        self.assertEqual(esperado, resultado)
+
 if __name__ == '__main__':
     unittest.main()
