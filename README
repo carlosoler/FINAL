@@ -2,3 +2,12 @@ En este directorio debe entregar los ficheros que conforman la respuesta a la pr
 
 Se ha utilizado el entorno de desarrollo Pycharm.
 Para la ejecución de los test hay que darle click derecho al archivo testContadorFrases.py y ejecutarlo donde pone "Run Python test y test" o introducir el siguiente comando en la terminal de Pycharm: python3 -m unittest testContadorFrases
+
+SERVIDOR:
+Para ejecutarlo hay que introducir en la terminal: make servidor
+Se puede cambiar el fichero que se desee dentro de servidor.py en la 7 linea
+
+CLIENTE:
+Para ejecutarlo hay que introducir en la terminal: make cliente
+Si se desea hacer peticiones con TOTAL inifinitas hay que introducir: while true; do echo 'TOTAL' | make cliente ; done
+Si se desea hacer peticiones con FRASE inifinitas hay que introducir: while true; do echo 'FRASE' | make cliente ; done
