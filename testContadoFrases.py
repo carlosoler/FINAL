@@ -40,8 +40,19 @@ class MyTestCase(unittest.TestCase):
         fichero = 'hola'
         cont = ContadorFrases()
         resultado = cont.calculador(peticion, fichero)
-        esperado = ''
+        esperado = ""
         self.assertEqual(esperado, resultado)
+
+    def test_ComprobarQueLaFraseEstaEnElFichero(self):
+        peticion = 'FRASE'
+        fichero = 'DATOS'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        fichero_abierto = open(fichero, "r")
+        f = fichero_abierto.read()
+        if resultado in f:
+            return True
+        self.assertTrue(resultado)
 
 
 if __name__ == '__main__':
