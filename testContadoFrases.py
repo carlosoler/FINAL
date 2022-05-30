@@ -85,5 +85,13 @@ class MyTestCase(unittest.TestCase):
         esperado = "6 FRASES 9 LINEAS"
         self.assertEqual(esperado, resultado)
 
+    def test_probarFicheroServices(self):
+        peticion = 'TOTAL'
+        fichero = 'ejemplo_services'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        esperado = "11159 FRASES 11177 LINEAS"
+        self.assertEqual(esperado, resultado)
+
 if __name__ == '__main__':
     unittest.main()
