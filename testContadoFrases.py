@@ -11,6 +11,14 @@ class MyTestCase(unittest.TestCase):
         esperado = "1 FRASES 1 LINEAS"
         self.assertEqual(esperado, resultado)
 
+    def test_mostrarTotalOtroArchivo(self):
+        peticion = 'TOTAL'
+        fichero = 'DATOS'
+        cont = ContadorFrases()
+        resultado = cont.calculador(peticion, fichero)
+        esperado = "5 FRASES 11 LINEAS"
+        self.assertEqual(esperado, resultado)
+
 
 if __name__ == '__main__':
     unittest.main()
